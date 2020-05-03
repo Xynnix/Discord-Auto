@@ -23,3 +23,4 @@ npm install
 echo '#   Successfully created basic bot...'
 echo "# Please add your token in config.json"
 echo "# Deleted run.sh"
+rm ../run.sh
