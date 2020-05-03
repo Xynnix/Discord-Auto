@@ -17,8 +17,9 @@ echo '    "token": "insert-bot-token",' >> config.json
 echo '    "prefix": "?" ' >> config.json
 echo "}" >> config.json
 echo "# installing discord.js now with npm"
-echo npm install discord.js
+npm install discord.js
 echo '#   Successfully created basic bot...'
 echo "# Please add your token in config.json"
 echo "# Deleted run.sh"
-echo rm ../run.sh
+rm ../run.sh
+
