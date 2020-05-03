@@ -11,6 +11,7 @@ echo "client.on('message', (message) =>{" >>index.js
 echo "    if (message.author.bot) return;" >> index.js
 echo "    if (message.content === prefix + 'ping')" >> index.js
 echo "       message.channel.send('pang');" >> index.js
+echo "};" >> index.js
 echo "client.login(config.token);" >> index.js
 echo "{" >> config.json
 echo '    "token": "insert-bot-token",' >> config.json
