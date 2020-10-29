@@ -1,0 +1,22 @@
+{
+  "name": "discord-auto",
+  "version": "1.0.0",
+  "description": "All you need to do is:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xynnix/Discord-Auto.git"
+  },
+  "author": "Xynnix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xynnix/Discord-Auto/issues"
+  },
+  "homepage": "https://github.com/Xynnix/Discord-Auto#readme",
+  "dependencies": {
+    "discord.js": "git+https://github.com/Xynnix/Discord.js.git"
+  }
+}
