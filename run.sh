@@ -51,7 +51,7 @@ then echo "File ./run.sh still exists."
         read yaynay
         if [ $yaynay = "y" ]
         then echo "Deleted run.sh & Starting!"
-        then rm -r ./run.sh && node index.js
+        rm -r ./run.sh && node index.js
         else echo "Keeping run.sh & Starting Bot!"
 	node ./index.js
             fi
