@@ -14,8 +14,8 @@ echo "Directory ./Bot does not exist. Creating it now..."
 mkdir Bot && cd Bot
 touch index.js && touch config.json
 
-echo "Add your Token now..."
-read Token
+echo "Add your Bot Token now..."
+read -s Token
 echo "Add your OwnerID now..."
 read OwnerID
 echo "Add your Prefix now."
