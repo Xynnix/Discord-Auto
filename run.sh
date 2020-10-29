@@ -44,14 +44,14 @@ echo "# installing discord.js now with npm"
 mv ../package.json .
 npm install
 echo '#   Successfully created basic bot...'
-echo 'Delete run.sh? [ y / n ] [This is irreversable and will not allow you to redo this process!]'
-        read DeleteRun
-        if [ $DeleteRun = "y" ]
-        echo "# Deleted run.sh"
-        then rm -r ../run.sh
-        else
-        echo "Keeping run.sh!"
-        echo "Starting Bot..."
-        node ./index.js
+if [ -f "../run.sh" ]
+then echo "File ./run.sh still exists."
+        echo "Delete? [ y / n]"
+        read yaynay
+        if [ $yaynay = "y" ]
+        then echo "Deleted run.sh"
+        #then rm -r ./run.sh
+        else echo "Exiting..."
         fi
+    fi
 fi
