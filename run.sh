@@ -41,6 +41,14 @@ echo '    "OwnerID": "'$OwnerID'",' >> config.json
 echo '    "prefix": "'$Prefix'"' >> config.json
 echo "}" >> config.json
 echo "# installing discord.js now with npm"
+if which node > /dev/null
+    then
+        echo "Node is installed, continuing npm..."
+    else
+	echo "Node is Not installed! Installing..."
+	apt update && apt upgrade
+	apt install nodejs -y
+    fi
 if [ -f "../package.json" ]
 then mv ../package.json . && npm install
 else npm init -y > /dev/null && npm install discord.js
