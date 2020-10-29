@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -d "./Bot" ]
-then echo "Directory ./Bot exists"
+then echo "Error: Directory ./Bot exists"
         echo "Overwrite? [ y / n]"
         read yesno
         if [ $yesno = "y" ]
@@ -10,7 +10,7 @@ then echo "Directory ./Bot exists"
         else echo "Exiting..."
         fi
 else
-echo "Error: Directory /path/to/dir does not exist. Creating it now..."
+echo "Directory ./Bot does not exist. Creating it now..."
 mkdir Bot && cd Bot
 touch index.js && touch config.json
 
@@ -41,17 +41,20 @@ echo '    "OwnerID": "'$OwnerID'",' >> config.json
 echo '    "prefix": "'$Prefix'"' >> config.json
 echo "}" >> config.json
 echo "# installing discord.js now with npm"
-mv ../package.json .
-npm install
+if [ -f "../package.json" ]
+then mv ../package.json . && npm install
+else npm init -y > /dev/null && npm install discord.js
 echo '#   Successfully created basic bot...'
 if [ -f "../run.sh" ]
 then echo "File ./run.sh still exists."
         echo "Delete? [ y / n]"
         read yaynay
         if [ $yaynay = "y" ]
-        then echo "Deleted run.sh"
-        #then rm -r ./run.sh
-        else echo "Exiting..."
-        fi
+        then echo "Deleted run.sh & Starting!"
+        then rm -r ./run.sh && node index.js
+        else echo "Keeping run.sh & Starting Bot!"
+	node ./index.js
+            fi
+	fi
     fi
 fi
