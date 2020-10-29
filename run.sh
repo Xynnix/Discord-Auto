@@ -47,8 +47,8 @@ echo '#   Successfully created basic bot...'
 echo 'Delete run.sh? [ y / n ] [This is irreversable and will not allow you to redo this process!]'
         read DeleteRun
         if [ $DeleteRun = "y" ]
-        then rm -r ../run.sh
         echo "# Deleted run.sh"
+        then rm -r ../run.sh
         else
         echo "Keeping run.sh!"
         echo "Starting Bot..."
