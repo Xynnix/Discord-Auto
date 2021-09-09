@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Xynnix/Discord-Auto#readme",
   "dependencies": {
-    "discord.js": "git+https://github.com/Xynnix/Discord.js.git"
+    "discord.js": "5.0.1-alpha.7-patch.0"
   }
 }
